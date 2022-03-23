@@ -1,17 +1,13 @@
 package com.josue.moviebookingapp
 
-class Movie {
-    var name: String = "Movie Name"
-    var image: String = "Movie Image"
-    var certification: String = "Movie Certification"
-    var description: String = "Movie Description"
-    var starring = arrayOf(
-            "First actor",
-            "Second actor",
-            "Third actress"
-    )
+data class Movie(
+    var movieImage: Int, //should be String
+    var movieTitle: String,
+    var movieCert: Int, //should be String
+    var movieDescription: String, //not used in MovieAdapter yet
+    var movieStarring: String, // should be Array<String>
     //Have to convert to hours + mins
-    var running_time_mins: Int = 0
-    var seats_remaining: Int = (0..15).random()
-    var seats_selected: Int = 0
-}
+    var movieTime: String, // should be Int,
+    var movieSeats_remaining: String, // should be Int, //= (0..15).random()
+    var movieSeats_selected: String // should be Int AND not used in MovieAdapter yet
+)
