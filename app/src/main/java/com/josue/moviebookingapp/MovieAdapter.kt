@@ -39,7 +39,8 @@ class MovieAdapter(private val movieList: ArrayList<Movie>): RecyclerView.Adapte
         val movieStarring: TextView = itemView.findViewById(R.id.movieStarring)
         val movieTime: TextView = itemView.findViewById(R.id.movieTime)
         val movieSeats: TextView = itemView.findViewById(R.id.movieSeats)
-        val movieSeatsIcon: ImageView = itemView.findViewById(R.id.movieIconSeats)
+        //val movieSeatsIcon: ImageView = itemView.findViewById(R.id.movieIconSeats)
+        //val movieDescription: TextView = itemView.findViewById(R.id.)
     }
 }
 

@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var movieStarring: Array<String>
     lateinit var movieTime: Array<String>
     lateinit var movieSeats: Array<String>
+    //lateinit var movieSeats_remaining: Array<String>
+    //lateinit var movieSeats_selected: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,17 +41,18 @@ class MainActivity : AppCompatActivity() {
         )
 
         movieCert = arrayOf(
-            113,
-            220,
-            333,
-            125,
-            789,
-            567
+            R.drawable.test_cert,
+            R.drawable.test_cert,
+            R.drawable.test_cert,
+            R.drawable.test_cert,
+            R.drawable.test_cert,
+            R.drawable.test_cert
         )
 
         movieStarring = arrayOf(
             "Actor one",
             "Actor two",
+            "Actor three",
             "Actress One",
             "Actress two",
             "Actress three"
@@ -71,19 +74,19 @@ class MainActivity : AppCompatActivity() {
             "seats##"
         )
 
-        newRecyclerView = findViewById( R.id.recycleView)
+        newRecyclerView = findViewById(R.id.movieRecycle)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
 
-        newArrayList = arrayListOf<Movie>()
-        getuserData()
+        newArrayList = arrayListOf()
+        getUserData()
 
 
     }
 
-    private fun getuserData() {
+    private fun getUserData() {
         for (i in movieImage.indices ){
-            val movies = Movie(movieImage[i],movieTitle[i],movieCert[i],movieStarring[i],movieTime[i],movieSeats[i], movieSeats_remaining = "", movieSeats_selected = "")
+            val movies = Movie(movieImage[i],movieTitle[i],movieCert[i],movieStarring[i],movieTime[i],movieSeats[i])
             newArrayList.add(movies)
         }
         newRecyclerView.adapter = MovieAdapter(newArrayList)
