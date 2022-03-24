@@ -4,7 +4,7 @@ data class Movie(
     var movieImage: Int, //should be String
     var movieTitle: String,
     var movieCert: Int, //should be String
-    //var movieDescription: String, //not used in MovieAdapter yet
+    var movieDescription: String,
     var movieStarring: String, // should be Array<String>
     //Have to convert to hours + mins
     var movieTime: String, // should be Int,
