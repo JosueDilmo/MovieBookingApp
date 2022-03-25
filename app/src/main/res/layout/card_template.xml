@@ -129,7 +129,7 @@
                     app:srcCompat="@android:drawable/btn_dialog" />
 
                 <TextView
-                    android:id="@+id/movieSeats"
+                    android:id="@+id/movieSeatsRemaining"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -144,6 +144,16 @@
 
 
     </LinearLayout>
+    <TextView
+        android:id="@+id/movieDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/movieSeats_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
@@ -152,4 +162,5 @@
         android:background="@color/white">
 
     </View>
+
 </LinearLayout>

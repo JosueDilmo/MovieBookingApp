@@ -120,7 +120,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/movieIconSeats"
+                    android:id="@+id/movieSeatsIcon"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_gravity="center_horizontal"
