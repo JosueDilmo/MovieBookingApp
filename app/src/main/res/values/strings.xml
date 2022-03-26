@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MovieBookingApp</string>
+    <string name="movie_title">Title</string>
+    <string name="starring">Starring:</string>
+    <string name="movie_starring">starring</string>
+    <string name="running_time">Running Time:</string>
+    <string name="movie_time">time</string>
+    <string name="seats">0</string>
+    <string name="seats_remaining">Seats remaining</string>
+
 </resources>

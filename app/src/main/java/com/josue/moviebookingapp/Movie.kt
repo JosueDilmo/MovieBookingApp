@@ -6,7 +6,7 @@ data class Movie(
     var movieCert: Int, //should be String
     var movieStarring: String, // should be Array<String>
     var movieTime: String, // should be Int, Have to convert to hours + mins
-    var movieSeatsRemaining: String, // should be Int, //= (0..15).random()
-    var movieSeatsSelected: String, // should be Int AND not used in MovieAdapter yet
+    var movieSeatsRemaining: Int,
+    var movieSeatsSelected: String, // should be Int
     var movieDescription: String
 )
