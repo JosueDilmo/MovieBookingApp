@@ -7,6 +7,7 @@ data class Movie(
     var movieStarring: String, // should be Array<String>
     var movieTime: String, // should be Int, Have to convert to hours + mins
     var movieSeatsRemaining: Int,
-    var movieSeatsSelected: String, // should be Int
-    var movieDescription: String
+    var movieSeatsSelected: Int, // should be Int
+    var movieDescription: String,
+    //var movieIconSeats: Int
 )

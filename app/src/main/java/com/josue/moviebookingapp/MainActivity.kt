@@ -1,5 +1,6 @@
 package com.josue.moviebookingapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var movieStarring: Array<String>
     lateinit var movieTime: Array<String>
     lateinit var movieSeatsRemaining: Array<Int>
-    lateinit var movieSeatsSelected: Array<String>
+    lateinit var movieSeatsSelected: Array<Int>
     lateinit var movieDescription: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,12 +52,12 @@ class MainActivity : AppCompatActivity() {
         )
 
         movieStarring = arrayOf(
-            "Eiza González, Jake Gyllenhaal, Yahya Abdul-Mateen II",
-            "Reese Witherspoon, Matthew McConaughey, Scarlett Johansson",
-            "Craig Robinson, Marc Maron, Sam Rockwell",
-            "Tom Holland, Mark Wahlberg, Antonio Banderas",
-            "Robert Pattinson, Zoe Kravitz, Paul Dano, Colin Farrell",
-            "Catherine Tate, Mathew Horne, Katherine Parkinson"
+            getString(R.string.Ambulance_casting),
+            getString(R.string.Sing2_casting),
+            getString(R.string.TheBadGuys_casting),
+            getString(R.string.Uncharted_casting),
+            getString(R.string.TheBatman_casting),
+            getString(R.string.TheNan_casting)
         )
         movieTime = arrayOf(
             "2hrs 16mins",
@@ -76,22 +77,23 @@ class MainActivity : AppCompatActivity() {
         )
 
         movieSeatsSelected = arrayOf(
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
         )
 
         movieDescription = arrayOf(
-            "\"Over one day across the streets of L.A., three lives will change forever.\"",
-            "\"Can-do koala Buster Moon and his all-star cast of animal performers prepare to launch their most dazzling stage extravaganza yet... in the glittering entertainment capital of the world.\"",
-            "\"In the new action comedy from DreamWorks Animation, based on the New York Times best-selling book series, a crackerjack criminal crew of animal outlaws are about to attempt their most challenging con yet - becoming model citizens.\"",
-            "\"Street-smart Nathan Drake (Tom Holland) is recruited by seasoned treasure hunter Victor \"Sully\" Sullivan (Mark Wahlberg) to recover a fortune amassed by Ferdinand Magellan and lost 500 years ago by the House of Moncada.\"",
-            "\"From Warner Bros. Pictures comes \"The Batman,\" with director Matt Reeves (the \"Planet of the Apes\" films) at the helm and with Robert Pattinson (\"Tenet,\" \"The Lighthouse,\" \"Good Time\") starring as Gotham City's vigilante detective, Batman.\"",
-            "\"Catherine Tate's iconic character Nan hits the big screen as she goes on a wild road trip from London to Ireland with her grandson Jamie (Mathew Horne) to make amends with her estranged sister Nell (Katherine Parkinson).\""
-        )
+            getString(R.string.Ambulance),
+            getString(R.string.Sing_2),
+            getString(R.string.The_Bad_Guys),
+            getString(R.string.Uncharted),
+            getString(R.string.The_Batman),
+            getString(R.string.The_Nan_Movie)
+
+            )
 
         newRecyclerView = findViewById(R.id.movieRecycle)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -114,8 +116,17 @@ class MainActivity : AppCompatActivity() {
         newRecyclerView.adapter = adapter
         adapter.setOnItemClickListener(object: MovieAdapter.onItemClickListener{
             override fun onItemClick(position: Int){
-                Toast.makeText(this@MainActivity,"Clicked item number $position", Toast.LENGTH_SHORT).show()
-
+                //Toast.makeText(this@MainActivity,"Clicked item number $position", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, MovieActivity::class.java)
+                intent.putExtra("movieImage",newArrayList[position].movieImage)
+                intent.putExtra("movieTitle",newArrayList[position].movieTitle)
+                intent.putExtra("movieCert",newArrayList[position].movieCert)
+                intent.putExtra("movieStarring",newArrayList[position].movieStarring)
+                intent.putExtra("movieTime",newArrayList[position].movieTime)
+                intent.putExtra("movieSeatsRemaining",newArrayList[position].movieSeatsRemaining)
+                intent.putExtra("movieSeatsSelected",newArrayList[position].movieSeatsSelected)
+                intent.putExtra("movieDescription",newArrayList[position].movieDescription)
+                startActivity(intent)
             }
         })
 

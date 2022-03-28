@@ -18,7 +18,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="40dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -34,15 +33,15 @@
                 android:layout_gravity="center"
                 android:layout_marginEnd="10dp"
                 android:fontFamily="sans-serif"
-                android:text="Movie Title"
+                android:text="@string/movie_title"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/movieCert"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 app:shapeAppearanceOverlay="@style/RoundCorner"
                 app:srcCompat="@drawable/cert_12a" />
 
@@ -51,16 +50,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/starringDisplay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
                 android:fontFamily="sans-serif"
-                android:text="Starring:"
+                android:text="@string/starring"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -71,7 +70,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif"
                 android:padding="3dp"
-                android:text="movie starring"
+                android:text="@string/movie_starring"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -86,8 +85,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
                 android:fontFamily="sans-serif"
-                android:text="Running Time:"
+                android:text="@string/running_time"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -98,24 +98,75 @@
                 android:layout_height="match_parent"
                 android:fontFamily="sans-serif"
                 android:padding="3dp"
-                android:text="movie time"
+                android:text="@string/movie_time"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/movieDescription"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:fontFamily="sans-serif"
+            android:padding="3dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/movieDescription"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
             android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/seatsSelectedDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/seatsSelectedDisplay"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/seatsIconMinus"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                app:srcCompat="@drawable/ic_minus"/>
+
+            <TextView
+                android:id="@+id/movieSeatsSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/movieSeatsSelected"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/seatsIconPlus"
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                app:srcCompat="@drawable/ic_plus" />
+
 
             <ImageView
                 android:id="@+id/movieIconSeats"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
                 app:srcCompat="@drawable/ic_seat" />
 
             <TextView
@@ -123,11 +174,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:fontFamily="sans-serif"
-                android:text="movie seats"
+                android:text="@string/seats"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/seatsRemainingDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/seats_remaining"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"/>
+
         </LinearLayout>
 
     </LinearLayout>

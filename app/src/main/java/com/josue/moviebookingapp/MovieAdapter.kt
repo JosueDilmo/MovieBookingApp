@@ -35,8 +35,9 @@ class MovieAdapter(private val movieList: ArrayList<Movie>): RecyclerView.Adapte
         holder.movieStarring.text = currentMovie.movieStarring
         holder.movieTime.text = currentMovie.movieTime
         holder.movieSeatsRemaining.text = currentMovie.movieSeatsRemaining.toString()
-        //holder.movieDescription.text = currentMovie.movieDescription
-        //holder.movieIconSeats.setImageResource(currentMovie.movieIconSeats)
+        //holder.movieIcon.setImageResource(currentMovie.movieIconSeats)
+
+
     }
 
     override fun getItemCount(): Int {
@@ -50,8 +51,8 @@ class MovieAdapter(private val movieList: ArrayList<Movie>): RecyclerView.Adapte
         val movieStarring: TextView = itemView.findViewById(R.id.movieStarring)
         val movieTime: TextView = itemView.findViewById(R.id.movieTime)
         val movieSeatsRemaining: TextView = itemView.findViewById(R.id.movieSeatsRemaining)
-        //val movieDescription: TextView = itemView.findViewById(R.id.movieDescription)
-        //val movieIconSeats: ImageView = itemView.findViewById(R.id.movieIconSeats)
+        //val movieIcon: ImageView = itemView.findViewById(R.id.movieIconSeats)
+        //val movieSeatsSelect: TextView = itemView.findViewById(R.id.movieSeatsSelected)
 
         init {
             itemView.setOnClickListener{

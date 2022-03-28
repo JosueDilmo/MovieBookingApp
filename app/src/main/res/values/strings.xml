@@ -1,11 +1,26 @@
 <resources>
     <string name="app_name">MovieBookingApp</string>
-    <string name="movie_title">Title</string>
+    <string name="movie_title">title</string>
     <string name="starring">Starring:</string>
     <string name="movie_starring">starring</string>
     <string name="running_time">Running Time:</string>
     <string name="movie_time">time</string>
     <string name="seats">0</string>
     <string name="seats_remaining">Seats remaining</string>
-
+    <string name="seatsSelected">Seats selected</string>
+    <string name="movieSeatsSelected">0</string>
+    <string name="seatsSelectedDisplay">Select Seats</string>
+    <string name="movieDescription">description will go in here</string>
+    <string name="Ambulance">"Over one day across the streets of L.A., three lives will change forever."</string>
+    <string name="Ambulance_casting">"Eiza González, Jake Gyllenhaal, Yahya Abdul-Mateen II"</string>
+    <string name="Sing_2">"Can-do koala Buster Moon and his all-star cast of animal performers prepare to launch their most dazzling stage extravaganza yet… in the glittering entertainment capital of the world."</string>
+    <string name="Sing2_casting">"Reese Witherspoon, Matthew McConaughey, Scarlett Johansson"</string>
+    <string name="The_Bad_Guys">"In the new action comedy from DreamWorks Animation, based on the New York Times best-selling book series, a crackerjack criminal crew of animal outlaws are about to attempt their most challenging con yet - becoming model citizens."</string>
+    <string name="TheBadGuys_casting">"Craig Robinson, Marc Maron, Sam Rockwell"</string>
+    <string name="Uncharted">"Street-smart Nathan Drake (Tom Holland) is recruited by seasoned treasure hunter Victor "Sully" Sullivan (Mark Wahlberg) to recover a fortune amassed by Ferdinand Magellan and lost 500 years ago by the House of Moncada."</string>
+    <string name="Uncharted_casting">"Tom Holland, Mark Wahlberg, Antonio Banderas"</string>
+    <string name="The_Batman">"From Warner Bros. Pictures comes "The Batman," with director Matt Reeves (the "Planet of the Apes" films) at the helm and with Robert Pattinson ("Tenet," "The Lighthouse," "Good Time") starring as Gotham City's vigilante detective, Batman."</string>
+    <string name="TheBatman_casting">"Robert Pattinson, Zoe Kravitz, Paul Dano, Colin Farrell"</string>
+    <string name="The_Nan_Movie">"Catherine Tate's iconic character Nan hits the big screen as she goes on a wild road trip from London to Ireland with her grandson Jamie (Mathew Horne) to make amends with her estranged sister Nell (Katherine Parkinson)."</string>
+    <string name="TheNan_casting">Catherine Tate, Mathew Horne, Katherine Parkinson"</string>
 </resources>
